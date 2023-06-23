@@ -1,0 +1,246 @@
+@import './reset.css';
+@import url(https://allfont.ru/allfont.css?fonts=bookman-old-style);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+}
+.container {
+  max-width: 345px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Color */
+:root {
+  --pink: #f6dafb;
+  --violet: #b48bca;
+  --dark: #2e2931;
+  --gray: #7e678b;
+  --title: #1d191f;
+
+  --bg: var(--pink);
+  --bg-info: var(--violet);
+}
+
+/* Header */
+
+.header {
+  font-family: 'Bookman Old Style';
+  padding: 10px 0 8px 0;
+  font-size: 14px;
+  background: var(--bg);
+}
+
+.instagram {
+  margin-bottom: 8px;
+}
+
+.logo {
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: top 0.2s ease-in;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.logo:active {
+  position: relative;
+  top: 1px;
+}
+
+.info-wrapper {
+  background: linear-gradient(#efbbf4, #f7c4fa);
+  padding: 0 0 60px 0;
+}
+.info-name {
+  padding-top: 41px;
+  background: #efbbf4;
+}
+.info-img img {
+  border-radius: 60px 0;
+}
+.info-img {
+  position: relative;
+}
+.info-title {
+  position: absolute;
+  top: 385px;
+  width: 260px;
+  color: var(--title);
+  background-color: #efbbf4;
+  border-radius: 0 90px 0 0;
+  padding: 22px 0 14px 10px;
+  font-size: 34px;
+}
+.info-text {
+  color: var(--dark);
+  font-size: 24px;
+  font-family: Roboto;
+  font-weight: 300;
+  line-height: 1.4;
+  padding-top: 20px;
+}
+
+.title {
+  text-align-last: left;
+  color: var(--dark);
+  font-family: Bookman Old Style;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.info-subtitle {
+  padding: 60px 0 16px 0;
+}
+
+/* Слайдер */
+.swiper {
+  width: 325px;
+  height: 263px;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background: var(--gray);
+}
+.swiper-slide img {
+  padding: 0 15px 24px 0;
+  background-position: center;
+  background-size: cover;
+  width: 325px;
+  height: 263px;
+  border-radius: 0 60px;
+}
+
+/* Courses */
+
+.courses {
+  background: var(--bg);
+}
+.course {
+  position: relative;
+}
+.course::before {
+  content: '';
+  width: 500px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+}
+
+.course-title {
+  padding-top: 100px;
+  text-align: center;
+  position: relative;
+  font-size: 34px;
+  font-weight: 300;
+  color: var(--dark);
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: Bookman Old Style;
+  text-transform: uppercase;
+}
+.course-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 19%;
+  width: 195px;
+  height: 1px;
+  background: var(--dark);
+}
+
+.course-desc {
+  color: var(--gray);
+  text-align: center;
+  padding-bottom: 60px;
+}
+.course-subtitle {
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+.subtitle {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--dark);
+  text-align: center;
+  font-family: Bookman Old Style;
+  text-transform: uppercase;
+}
+.course-list {
+  color: var(--gray);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 40px;
+}
+.course-list__item {
+  position: relative;
+  padding-left: 17px;
+}
+.course-list__item::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 14px;
+  left: 0;
+  border-radius: 50%;
+  background: var(--gray);
+}
+.course-list__item strong {
+  font-weight: 500;
+}
+
+/* Price */
+
+.course-price {
+  padding-top: 60px;
+}
+.price-title span {
+  text-align: center;
+  font-size: 40px;
+  text-transform: none;
+}
+.price-desc {
+  color: var(--gray);
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  padding-bottom: 20px;
+}
+.price-btn {
+  width: 315px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 0px 40px;
+  background: #b48bca;
+  margin-bottom: 60px;
+  color: var(--dark);
+}
+
+
+@media (max-width: 2000px) {
+  .course::before {
+    content: '';
+    width: 2000px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: -800px;
+  }
+}
